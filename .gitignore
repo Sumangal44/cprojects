@@ -3,4 +3,10 @@ node_modules
 .env
 .vscode
 dist    
-
+cache
+coverage
+.vscode-test
+*.log
+*.tmp
+*.exe
+*.dll
