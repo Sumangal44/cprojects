@@ -1,28 +1,77 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "My Awesome Project",
-  description: "A VitePress Site",
+  lang: "en-US",
+  title: "C Projects",
+  description: "Collection of C Programming Projects",
+
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    logo: "/logo.svg",
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: "Home", link: "/" },
+      { text: "Projects", link: "/projects" },
+      { text: "Getting Started", link: "/getting-started" },
+      {
+        text: "Resources",
+        items: [
+          {
+            text: "Java Documentation",
+            link: "https://docs.oracle.com/en/java/"
+          },
+          { text: "Contributing", link: "/contributing" },
+          { text: "FAQ", link: "/faq" }
+        ]
+      }
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: "Guide",
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: "Getting Started", link: "/getting-started" },
+          { text: "Projects", link: "/projects" },
+          { text: "FAQ", link: "/faq" },
+          { text: "Contributing", link: "/contributing" }
+        ]
+      },
+      {
+        text: "Projects",
+        items: [
+          { text: "Calculator", link: "/projects/calculator" },
+          {
+            text: "Number Guessing Game",
+            link: "/projects/number-guessing-game"
+          }
+        ]
+      },
+      {
+        text: "Advanced Topics",
+        items: [
+          { text: "Best Practices", link: "/advanced/best-practices" },
+          { text: "Design Patterns", link: "/advanced/design-patterns" },
+          { text: "Testing", link: "/advanced/testing" }
         ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
-})
+      { icon: "github", link: "https://github.com/Sumangal44/javaprojects" }
+    ],
+
+    footer: {
+      message: "Built with C ☕",
+      copyright: "Copyright © 2025 Java Projects. All rights reserved."
+    },
+
+    search: {
+      provider: "local"
+    },
+
+    outline: {
+      level: [2, 3],
+      label: "On this page"
+    }
+  },
+
+  head: [["link", { rel: "icon", type: "image/svg+xml", href: "/logo.svg" }]]
+});
